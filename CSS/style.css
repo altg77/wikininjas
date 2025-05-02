@@ -1,0 +1,461 @@
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&family=IM+Fell+English+SC&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: white;
+    font-family: 'IM Fell English SC', serif;
+    background-image:
+        linear-gradient(to left, transparent 0%, hsla(0, 0%, 100%, 0.705) 50%), 
+        linear-gradient(to right, transparent 0%, #ffffffbd 50%), 
+        url('/IMG/ninjas/naruto-manga-e86faunm0r96om1e.jpg'); 
+    background-repeat:round;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease; 
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 30px; /* Um padding inicial para o estado normal */
+  }
+  
+  nav a:hover {
+    background-color: #000000;
+    color: white;
+  }
+
+#menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #d4af37;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+main {
+    padding-top: 80px;
+}
+
+/*================= SUBMENU ======================*/
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none; /* Oculto por padrão - o JS controlará */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #d4af37;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Mantemos o hover para o primeiro nível do dropdown */
+}
+
+.dropdown-content > li {
+    position: relative;
+}
+
+.dropdown-content > li > a { /* Estilo para o link da vila */
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content > li > a:hover {
+    background-color: #000000;
+    color: white;
+}
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu .submenu {
+    display: none; /* Oculto por padrão - o JS controlará */
+    position: absolute;
+    left: 100%; /* Posiciona à direita do item da vila */
+    top: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+
+.dropdown-submenu > a::after {
+    content: "\00bb"; /* Adiciona uma seta para indicar que há um submenu */
+    float: right;
+    margin-left: 5px;
+}
+
+  /*================= BOTAO ======================*/
+
+
+#theme-toggle {
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'IM Fell English SC', serif;
+    font-size: 0.8rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-left: 20px; /* Adiciona um espaço do menu */
+}
+
+#theme-toggle:hover {
+    background-color: #ff8800;
+}
+
+/*================= SECTIOn ======================*/
+
+section {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    animation: fadeIn 1.2s ease-in;
+}
+
+.personagem {
+    max-width: 130px;
+    margin: 20px 0;
+}
+
+/*================= SOBRE ======================*/
+
+#sobre {
+    padding: 60px 20px;
+    color: #000000;
+}
+
+#sobre h2 {
+    color: #d4af37;
+    font-size: 3rem;
+    text-shadow: 1px 1px #000;
+}
+
+#sobre h5 {
+    color: #d4af37;
+    font-size: larger;
+    margin-bottom: 20px;
+}
+
+#sobre p {
+    max-width: 700px;
+    margin-top: 20px;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+
+/*================= INFO ======================*/
+
+#info {
+    margin: 20px auto;
+    padding: 30px 20px; 
+    color: #f3e5ab;
+    line-height: 1.6;
+    background: #fa9426;
+    animation: fadeIn 1.2s ease-in;
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+}
+
+#info h2{
+    margin-bottom: 30px;
+}
+
+.info-bloco {
+    background-color: rgb(0, 0, 0); 
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 80%; 
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+.info-bloco h3 {
+    color: #d4af37;
+    font-size: 1.4rem;
+    margin-top: 0; 
+    margin-bottom: 15px;
+    text-shadow: 1px 1px #000;
+    border-bottom: 1px dashed #d4af37;
+    padding-bottom: 8px;
+}
+
+.info-bloco p,
+.info-bloco ul {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.info-bloco ul {
+    padding-left: 20px;
+    list-style-type: none;
+}
+
+.info-blocosec {
+    display: flex;
+    gap: 20px;
+    width: 80%;
+    margin-bottom: 20px;
+    justify-content: space-around;
+}
+
+.cubo {
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+    flex: 1;
+    min-width: 300px; 
+}
+
+.cubo h3 {
+    color: #ffffff;
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px #000;
+    border-bottom: 1px dashed #d4af37;
+    padding-bottom: 8px;
+}
+
+.cubo ul {
+    padding-left: 20px;
+    font-size: 1rem;
+    margin-bottom: 0; 
+    list-style-type: none;
+}
+
+#info > h3 {
+    color: #d4af37;
+    font-size: 1.6rem;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px #000;
+    text-align: center;
+    border-bottom: 2px dashed #d4af37;
+    padding-bottom: 5px;
+    width: 80%; 
+}
+
+#info > ul {
+    padding-left: 40px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    width: 80%; 
+    text-align: left;
+}
+
+#info blockquote {
+    margin-top: 30px;
+    font-style: italic;
+    background-color: #d4af37;
+    color: #000000;
+    text-align: center;
+    font-size: 1.4rem;
+    padding-left: 15px;
+    width: 80%; 
+}
+
+/*================= CONTATO ======================*/
+
+#contato{
+    background-image: url('/IMG/ninjas/backgorund22.png');
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 30px;
+    background-color: #fa9426;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ff9e6d;
+    background-image: url('/IMG/pergaminho.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+input,
+textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    border: 1px solid #ff9e6d;
+    border-radius: 5px;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #000000;
+}
+
+button {
+    padding: 10px;
+    background-color: #000000;
+    border: none;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff3c00;
+}
+
+/*================= FOOTER ======================*/
+
+.footer {
+    background-color: #fa9426;
+    color: #000000;
+    padding: 50px 20px;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top: 2px dashed #d4af37;
+    box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.6);
+}
+
+.footer-frase {
+    font-style: italic;
+    color: #000000;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.footer-titulo {
+    margin: 25px 0 10px;
+    font-size: 1.3rem;
+    color: #000000;
+    text-shadow: 1px 1px #000;
+}
+
+.footer-conteudo a {
+    color: #000000;
+    transition: color 0.3s, transform 0.3s;
+    font-size: 1.2rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 15px 0 25px;
+}
+
+.social-icons i {
+    font-size: 28px;
+    color: #000000;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons i:hover {
+    color: #f3e5ab;
+    transform: scale(1.3);
+}
+
+footer .copyright {
+    font-size: 0.9rem;
+    color: #000000af;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*================= BUSCA ======================*/
+
+.bussola {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    width: 100px;
+    height: 100px;
+    opacity: 0.9;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    animation-play-state: paused; 
+}
+
+.bussola:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    animation: girar 0.3s linear infinite; /* Iniciamos a animação no hover */
+}
+
+.bussola img {
+    width: 100%;
+    height: auto;
+    /* Removemos a animação daqui */
+}
+
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

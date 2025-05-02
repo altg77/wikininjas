@@ -1,0 +1,169 @@
+body.dark-theme {
+    color: #f0f0f0;
+    background-image:
+        linear-gradient(to left, transparent 0%, rgba(50, 50, 50, 0.705) 50%),
+        linear-gradient(to right, transparent 0%, rgba(50, 50, 50, 0.705) 50%),
+        url('/IMG/ninjas/naruto-manga-e86faunm0r96om1e.jpg'); 
+    background-repeat: round;
+}
+
+.nav.dark-theme {
+    background-color: rgba(30, 30, 30, 0.8); 
+}
+
+.nav.dark-theme nav a { 
+    color: #000000;
+}
+
+nav.dark-theme a:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+.dropdown-content.dark-theme {
+    background-color: #000000;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.6);
+}
+
+.dropdown-content.dark-theme > li > a {
+    color: #eee;
+}
+
+.dropdown-content.dark-theme > li > a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.dropdown-submenu .submenu.dark-theme {
+    background-color: #444;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.6);
+}
+
+#sobre.dark-theme h2 {
+    color: #d4af37; /* Mantendo a cor dourada */
+    text-shadow: 1px 1px #333;
+}
+
+#sobre.dark-theme h5 {
+    color: #bbb;
+}
+
+#sobre.dark-theme p {
+    color: #ddd;
+}
+
+#info.dark-theme {
+    background: #333;
+    color: #eee;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.info-bloco.dark-theme {
+    background-color: #222;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+.info-bloco.dark-theme h3 {
+    color: #d4af37;
+    border-bottom-color: #bbb;
+    text-shadow: 1px 1px #333;
+}
+
+.info-bloco.dark-theme p,
+.info-bloco.dark-theme ul {
+    color: #ccc;
+}
+
+.cubo.dark-theme {
+    background-color: #222;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+.cubo.dark-theme h3 {
+    color: #fff;
+    border-bottom-color: #bbb;
+    text-shadow: 1px 1px #333;
+}
+
+.cubo.dark-theme ul {
+    color: #ccc;
+}
+
+#info.dark-theme > h3 {
+    color: #d4af37;
+    border-bottom-color: #bbb;
+    text-shadow: 1px 1px #333;
+}
+
+#info.dark-theme > ul {
+    color: #ccc;
+}
+
+#info.dark-theme blockquote {
+    background-color: #555;
+    color: #eee;
+}
+
+form.dark-theme {
+    background-color: rgba(50, 50, 50, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    background-image: none;
+    border: 1px solid #777;
+}
+
+form.dark-theme input,
+form.dark-theme textarea {
+    background-color: #444;
+    color: #eee;
+    border-color: #777;
+}
+
+form.dark-theme input::placeholder,
+form.dark-theme textarea::placeholder {
+    color: #bbb;
+}
+
+form.dark-theme button {
+    background-color: #555;
+    color: #fff;
+}
+
+form.dark-theme button:hover {
+    background-color: #777;
+}
+
+.footer.dark-theme {
+    background-color: #333;
+    color: #eee;
+    border-top-color: #555;
+    box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.9);
+}
+
+.footer.dark-theme .footer-frase {
+    color: #ccc;
+}
+
+.footer.dark-theme .footer-titulo {
+    color: #fff;
+    text-shadow: 1px 1px #333;
+}
+
+.footer.dark-theme .footer-conteudo a {
+    color: #ddd;
+}
+
+.footer.dark-theme .social-icons i {
+    color: #ddd;
+}
+
+.footer.dark-theme .social-icons i:hover {
+    color: #bbb;
+}
+
+.footer.dark-theme .copyright {
+    color: #aaa;
+}
+
+.bussola.dark-theme {
+    /* Se você tiver uma imagem de bússola escura */
+}
